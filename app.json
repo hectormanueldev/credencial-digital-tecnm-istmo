@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "TecNM Istmo",
+    "slug": "tecnm-istmo",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "src/assets/images/logo-iti-ios.png",
+    "splash": {
+      "image": "src/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "bundleIdentifier": "mx.tecnm.istmo.idcard",
+      "buildNumber": "1.0.0",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Se accederá a tu Cámara para tomar tu fotografía que será usada en tu Credencial Digital",
+        "NSPhotoLibraryUsageDescription": "Se accederá a tu Galería de Fotos para que selecciones tu fotografía que será usada en tu Credencial Digital"
+      }
+    },
+    "android": {
+      "package": "mx.tecnm.istmo.idcard",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "src/assets/images/icono.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "Tecnm",
+            "project": "tecnm",
+            "authToken": "511f80d89eee4b9e95faecab4e3f84f13ad0980436cf4faebf4c59f87f40e19b"
+          }
+        }
+      ]
+    },
+    "plugins": ["sentry-expo"]
+  }
+}

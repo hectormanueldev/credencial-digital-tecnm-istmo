@@ -1,0 +1,10 @@
+import { USERAPLE, PASSWORD, API, CLIENT_ID, CLIENT_SECRET_KEY, ROLE } from '@env';
+
+export default {
+  USERAPLE,
+  PASSWORD,
+  API,
+  CLIENT_ID,
+  CLIENT_SECRET_KEY,
+  ROLE,
+};
