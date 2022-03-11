@@ -5,8 +5,8 @@ const postCredencial = async (uriImage, almCurp, almEmail, almName, almFname, al
   try {
     // Primera peticion
     const dataAdmin = await ApiConfig.post('admin/login', {
-      email: UrlApi.USERAPLE,
-      password: UrlApi.PASSWORD,
+      email: UrlApi.USER_STRAPI,
+      password: UrlApi.PASS_STRAPI,
     });
 
     // Segunda peticion
@@ -85,8 +85,8 @@ const postCredencial = async (uriImage, almCurp, almEmail, almName, almFname, al
 const getFoto = async ncontrol => {
   try {
     const dataAdmin = await ApiConfig.post('admin/login', {
-      email: UrlApi.USERAPLE,
-      password: UrlApi.PASSWORD,
+      email: UrlApi.USER_STRAPI,
+      password: UrlApi.PASS_STRAPI,
     });
 
     const foto = await ApiConfig.get(`students?matricula=${ncontrol}`, {
@@ -110,8 +110,8 @@ const getFoto = async ncontrol => {
 const getAvisos = async fecha => {
   try {
     const dataAdmin = await ApiConfig.post('admin/login', {
-      email: UrlApi.USERAPLE,
-      password: UrlApi.PASSWORD,
+      email: UrlApi.USER_STRAPI,
+      password: UrlApi.PASS_STRAPI,
     });
 
     const foto = await ApiConfig.get(`notifications-credentials?title=${fecha}`, {
